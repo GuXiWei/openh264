@@ -88,4 +88,7 @@
  *  Interfaces for CPU core feature detection as below
  */
 
+/* For loongson */
+#define WELS_CPU_MMI    0x00001   /* mmi */
+
 #endif//WELS_CPU_CORE_FEATURE_DETECTION_H__

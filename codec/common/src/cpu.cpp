@@ -307,6 +307,14 @@ uint32_t WelsCPUFeatureDetect (int32_t* pNumberOfLogicProcessors) {
          WELS_CPU_NEON;
 }
 
+#elif defined(HAVE_MMI)
+
+/* For loongson */
+
+uint32_t WelsCPUFeatureDetect (int32_t* pNumberOfLogicProcessors) {
+  return WELS_CPU_MMI;
+}
+
 #else /* Neither X86_ASM, HAVE_NEON nor HAVE_NEON_AARCH64 */
 
 uint32_t WelsCPUFeatureDetect (int32_t* pNumberOfLogicProcessors) {

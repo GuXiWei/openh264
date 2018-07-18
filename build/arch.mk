@@ -29,3 +29,12 @@ ASMFLAGS += -I$(SRC_PATH)codec/common/arm64/
 CFLAGS += -DHAVE_NEON_AARCH64
 endif
 endif
+
+#for loongson
+ifneq ($(filter mips64, $(ARCH)),)
+ifeq ($(USE_ASM), Yes)
+ASM_ARCH = mips64
+ASMFLAGS += -I$(SRC_PATH)codec/common/mips64/
+CFLAGS += -DHAVE_MMI
+endif
+endif
